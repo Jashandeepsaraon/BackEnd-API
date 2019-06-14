@@ -240,8 +240,8 @@ namespace WebAPIBudget.Controllers
 
             var result = Context
                 .Households
-                .Where(p => p.OwnerId == userId ||
-                p.Members.Any(t => t.Id == userId))
+                //.Where(p => p.OwnerId == userId ||
+                //p.Members.Any(t => t.Id == userId))
                 .Select(p => new ViewHouseholdViewModel
                 {
                     Id = p.Id,
